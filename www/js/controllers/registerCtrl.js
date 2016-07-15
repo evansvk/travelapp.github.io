@@ -1,9 +1,10 @@
 angular.module('starter.controllers')
     .controller('registerCtrl', ['$scope', 'SSFUsersRest', '$state', '$window', function($scope, SSFUsersRest, $state, $window) {
-        $scope.user = {};
+      
+       $scope.user = {};
 
 
-        $scope.signupForm = function(form) {
+        $scope.accessForm = function(form) {
             if (form.$invalid) {
                 return alert("Please complete the form before proceeding.");
             }

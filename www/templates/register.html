@@ -1,12 +1,12 @@
 <ion-view view-title="WanderList Registration">
-    <ion-content class="padding"><br><br><br>
+    <ion-content class="padding">
     
         <p>Welcome to WanderList. Window shop the world and visit at your leisure.</p>
         
-        <form name="registerForm" ng-submit="signupForm(registerForm)" novalidate><br>
+        <form name="registerForm" ng-submit="accessForm(registerForm)" novalidate><br>
 
 
-            <label class="item item-input" ng-class="{ 'has-errors' : registerForm.firstName.$invalid && registerForm.$submitted}">
+            <label class="item item-input" ng-class="{ 'has-errors' : registerForm.username.$invalid && registerForm.$submitted}">
         <input name="username" type="text" placeholder="Username" ng-model="user.username" required> 
         </label>
 
@@ -18,7 +18,7 @@
             <label class="item item-input" ng-class="{ 'has-errors' : registerForm.password.$invalid && registerForm.$submitted}">
                 <input name="password" type="password" placeholder="Password" ng-model="user.password" required></label><br><br>
 
-            <button input type="submit">Register!</button>
+            <button ui-sref="register">Register!</button>
         </form>
     </ion-content>
 </ion-view>

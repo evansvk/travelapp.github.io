@@ -1,15 +1,24 @@
-<ion-view title="WanderList Landing">
+<ion-view view-title="WanderList">
     <ion-content class="padding">
-        <form name="loginForm" ng-submit="accessForm(loginForm)" novalidate><br>
+
+  
+  <form name="loginForm" ng-submit="accessForm(loginForm)" novalidate>
             <label class="item item-input" ng-class="{ 'has-errors' : loginForm.email.$invalid && loginForm.$submitted}">
-            <input name="email" type="email" placeholder="Email" ng-model="user.email" required>
-            </label><br>
-
-            <label class="item item-input" ng-class="{ 'has-errors' : loginForm.password.$invalid && passwordForm.$submitted}">
-                <input name="password" type="password" placeholder="Password" ng-model="user.password" required></label><br>
-
-            <button type="submit">Enter</button>
+                    <input name="email" type="email" placeholder="Email" ng-model="user.email" required></label>
+            <label class="item item-input" ng-class="{ 'has-errors' : loginForm.password.$invalid && loginForm.$submitted}">
+                    <input name="Password" type="password" placeholder="Password" ng-model="user.password" required></label><br>
+             
+         <button class="button button-block button-positive" type="submit">
+          Sign In
+        </button>
         </form>
+
+        
+       
+        <center>Not Registered?</center>
+        <button class="button button-block button-positive" ui-sref="register">
+          Create Account
+        </button>
+        </div>
     </ion-content>
-    </div>
 </ion-view>
