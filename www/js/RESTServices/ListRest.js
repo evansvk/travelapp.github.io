@@ -5,20 +5,30 @@ angular.module('RESTServices')
         
         var apiUrl = 'https://travelapp-sirratav.c9users.io/api/Lists';
         
-        ListRest.save = function(list) {
+        ListRest.save = function(destination) {
             return $http({
                 url: apiUrl,
                 method: 'POST',
-                data: list,
+                data: destination,
                 headers: {
                     'Authorization': $window.localStorage.token
                 }
             });
         };
-        
-        ListRest.get = function() {
+    /* Added function to update exiting data   */
+        ListRest.update = function(destination) {
             return $http({
-                url: 'https://travelapp-sirratav.c9users.io/api/Lists/?filter[where][userID]=' + userID,
+                url: apiUrl,
+                method: 'PUT',
+                data: destination,
+                headers: {
+                    'Authorization': $window.localStorage.token
+                }
+            });
+        };
+        ListRest.get = function(userId) {
+            return $http({
+                url: 'https://travelapp-sirratav.c9users.io/api/Lists/?filter[where][userId]=' + userId,
                 method: 'GET'
             });
         };

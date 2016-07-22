@@ -4,7 +4,7 @@
 
         <form name="loginForm" ng-submit="accessForm(loginForm)" novalidate>
             <label class="list list-input" ng-class="{ 'has-errors' : loginForm.email.$invalid && loginForm.$submitted}">
-                    <input name="email"&&"username" type="email"&&"username" placeholder="Email or Username" ng-model="user.email"&&"user.username" required></label>
+                    <input name="email" type="email" placeholder="Email" ng-model="user.email" required></label>
             <label class="list list-input" ng-class="{ 'has-errors' : loginForm.password.$invalid && loginForm.$submitted}">
                     <input name="Password" type="password" placeholder="Password" ng-model="user.password" required></label><br>
 

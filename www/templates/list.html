@@ -1,4 +1,5 @@
-<ion-view view-title="Saved Lists">
+
+<ion-view view-title="Saved Lists" ng-controller= "listCtrl" ng-init="init()">
     <ion-content class="padding">
         <div class="list list-inset">
 
@@ -15,6 +16,9 @@
         
             
             <button class="button button-block button-dark" ui-sref="register">Add dream location</button>
+            <div ng-repeat = "l in lists track by $index">
+               <div  class = "button" ng-click = "$parent.removeDestination($index,l)">X</div> {{l.list}} 
+            </div>
             </form>
     </ion-content>
 </ion-view>

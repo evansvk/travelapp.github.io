@@ -1,6 +1,6 @@
 /*global angular*/
 angular.module('starter.controllers')
-    .controller('registerCtrl', ['$scope', '$state', '$window', 'SSFUsersRest', function($scope, $state, $window, SSFUsersRest) {
+    .controller('registerCtrl', ['$rootScope','$scope', '$state', '$window', 'SSFUsersRest', function($rootScope,$scope, $state, $window, SSFUsersRest) {
 
         $scope.user = {};
 
@@ -15,7 +15,9 @@ angular.module('starter.controllers')
 
                     $window.localStorage.token = response.data.token;
                     $window.localStorage.userID = response.data.id;
-                    $scope.user={};
+                    console.log('Check User Data :', response);
+                    $rootScope.user=response.data;
+                    // $scope.testUser = response.data;
 
                     alert("Welcome to Wandlerlust!");
                     $state.go('home');

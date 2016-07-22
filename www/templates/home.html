@@ -1,13 +1,18 @@
 <ion-view title="Home">
- <ion-content padding="true" ng-controller="registerCtrl">
+ <ion-content padding="true" ng-controller="registerCtrl" >
   <button class="button button-dark" ng-click=logOut()>
         Logout
-         </button>
+  </button>
+  
   <button class="button button-block button-dark" ui-sref="links">Links</button>
   <button class="button button-dark button icon ion-earth" ui-sref="list"> My WanderLists</button>
 
 
-  <center ng-controller="homeCtrl">Welcome {{wl.username}}</center>
+  <center ng-controller="homeCtrl" ng-init="init()">
+   Welcome 
+   {{dbuser.username}}
+  </center>
+  <!--<center >Welcome {{wl.user}}</center>-->
 
 
   <div class="list list-body">
