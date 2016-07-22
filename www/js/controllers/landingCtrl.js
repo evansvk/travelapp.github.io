@@ -1,11 +1,11 @@
 angular.module('starter.controllers')
-    .controller('landingCtrl', ['$scope', 'SSFUsersRest', '$state', '$window', function($scope, SSFUsersRest, $state, $window) {
+    .controller('landingCtrl', ['$scope', 'SSFUsersRest', '$state', '$window', function ($scope, SSFUsersRest, $state, $window) {
 
         $scope.user = {};
 
         $scope.signIn = function(form) {
             
-            SSFUsersRest.display($scope.user).then(function(response) {
+            SSFUsersRest.get($scope.user).then(function(response) {
              
                 if (response.status == 200) {
                     $window.localStorage.token = response.data.id;
@@ -21,7 +21,7 @@ angular.module('starter.controllers')
                     alert("Server error");
                 }
                 else {
-                    alert("User/Email doesn't exists");
+                    alert("Email and/or password invalid.");
                 }
 
 

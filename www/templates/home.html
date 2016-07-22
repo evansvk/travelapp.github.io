@@ -1,6 +1,19 @@
-<ion-view title="Wanderlust Homepage">
-    <ion-content class="padding">
-        <a class="button" href="https://preview.c9users.io/sirratav/travelapp/TravelApp/www/templates/list.html?_c9_id=livepreview1&_c9_host=https://ide.c9.io">Saved Lists</a>
-        <center>Google Search Plug in here </center>
-    </ion-content>
+<ion-view title="Home">
+ <ion-content padding="true" ng-controller="registerCtrl">
+  <button class="button button-dark" ng-click=logOut()>
+        Logout
+         </button>
+  <button class="button button-block button-dark" ui-sref="links">Links</button>
+  <button class="button button-dark button icon ion-earth" ui-sref="list"> My WanderLists</button>
+
+
+  <center ng-controller="homeCtrl">Welcome {{wl.username}}</center>
+
+
+  <div class="list list-body">
+
+  </div>
+
+
+ </ion-content>
 </ion-view>

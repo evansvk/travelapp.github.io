@@ -1,1 +1,20 @@
-<Center>Saved Links based on GeoLocation Maps saved here</center>
+<ion-view view-title="Saved Lists">
+    <ion-content class="padding">
+        <div class="list list-inset">
+
+
+            <!--<input name="name" type="text" ng-model="$scope.lists">-->
+            <div>Destinations</div>
+            <!--<div> {{$scope.list}} </div>-->
+            <form name="destinations" ng-submit="addDestination(destinations)" no validate>
+                
+                
+                <label class="list list-input">
+              <input name="list" type="text" ng-model="user.list">
+            
+        
+            
+            <button class="button button-block button-dark" ui-sref="register">Add dream location</button>
+            </form>
+    </ion-content>
+</ion-view>

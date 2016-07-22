@@ -1,66 +1,24 @@
-<ion-view view-title="WanderList">
-    <ion-content class="padding">
-<br><br><br><br>
-<br><br>
-<br><br>
-
-  
-  <form name="loginForm" ng-submit="signIn(loginForm)" novalidate>
-            <label class="item item-input" ng-class="{ 'has-errors' : loginForm.email.$invalid && loginForm.$submitted}">
+<ion-view view-title="WanderList Landing"  hide-back-button="true">
+  <ion-content class="padding">
+    <br>
+    <center>
+      <a class="button button-icon icon ion-earth"></a>
+    </center>
+    <div>
+    <form name="loginForm" ng-submit="signIn(loginForm)" novalidate>
+      <label class="list list-input item-stacked-label" ng-class="{ 'has-errors' : loginForm.email.$invalid && loginForm.$submitted}">
                     <input name="email" type="email" placeholder="Email" ng-model="user.email" required></label>
-            <label class="item item-input" ng-class="{ 'has-errors' : loginForm.password.$invalid && loginForm.$submitted}">
+      <label class="list list-input item-stacked-label" ng-class="{ 'has-errors' : loginForm.password.$invalid && loginForm.$submitted}">
                     <input name="Password" type="password" placeholder="Password" ng-model="user.password" required></label><br>
-                <!--<center><button class="button button-royal" type='submit'>{{'GENERAL.SUBMIT' | translate}}</button></center>-->
-         <button class="button button-block button-dark" type="submit">
+      <button class="button button-block button-dark" type="submit">
           Sign In
         </button>
-        </form>
+    </form>
+    </div>
 
-        
-       
-        <center>If you are not a registered user click below to create an account!</center>
-        <button class="button button-block button-dark" ng-click="register">
+    <center>New User?  Click below!</center>
+    <button class="button button-block button-dark" ui-sref="register">
           Register
         </button>
-        </div>
-    </ion-content>
+  </ion-content>
 </ion-view>
-
-
-
-
-
-<!--<ion-view>-->
-<!--    <ion-content>-->
-<!--        <form name="loginForm" ng-submit="accessForm(loginForm)" novalidate><br>-->
-
-
-<!--            <label class="item item-input" ng-class="{ 'has-errors' : loginForm.email.$invalid && loginForm.$submitted}">-->
-<!--            <input name="email" type="email" placeholder="Email" ng-model="user.email" required>-->
-<!--            </label>-->
-
-
-<!--            <label class="item item-input" ng-class="{ 'has-errors' : loginForm.password.$invalid && passwordForm.$submitted}">-->
-<!--                <input name="password" type="password" placeholder="Password" ng-model="user.password"></label>-->
-
-<!--            <button type="submit">Enter</button>-->
-<!--        </form>-->
-<!--    </ion-content>-->
-<!--</ion-view>-->
-
-
-<!--<ion-view view-title="Log In">-->
-<!--    <ion-content class="padding">-->
-<!--        <form name="register" ng-submit="accessForm(register)" novalidate><br><br>-->
-
-<!--                <label class="item item-input" ng-class="{ 'has-errors' : registerForm.email.$invalid && registerForm.$submitted}">-->
-<!--                    <input name="email" type="email" placeholder="Email" ng-model="user.email" required>-->
-<!--                </label>-->
-
-<!--                <label class="item item-input" ng-class="{ 'has-errors' : registerForm.password.$invalid && registerForm.$submitted}">-->
-<!--                    <input name="password" type="password" placeholder="Password" ng-model="user.password" required>-->
-<!--                </label>-->
-<!--                <br>-->
-<!--                <button class="color" type="submit">Submit! </button>-->
-
-<!--        </form>-->
